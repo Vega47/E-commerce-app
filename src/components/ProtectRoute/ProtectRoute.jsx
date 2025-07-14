@@ -3,6 +3,6 @@ export default function ProtectRoute(props) {
   if (localStorage.getItem("userToken") !== null) {
     return props.children;
   } else {
-    return <Navigate to="/login" />;
+    return <Navigate to="/E-commerce-app/login" />;
   }
 }

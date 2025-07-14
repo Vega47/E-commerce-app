@@ -29,7 +29,7 @@ function App() {
       element: <Layout />,
       children: [
         {
-          index: true,
+          path: "E-commerce-app/",
           element: (
             <ProtectRoute>
               <Home />
@@ -37,11 +37,12 @@ function App() {
           ),
         },
         {
-          path: "forgetpassword",
+          path: "E-commerce-app/forgetpassword",
           element: <ForgetPassword />,
         },
+
         {
-          path: "brands",
+          path: "E-commerce-app/brands",
           element: (
             <ProtectRoute>
               <Brands />
@@ -49,7 +50,7 @@ function App() {
           ),
         },
         {
-          path: "wishlist",
+          path: "E-commerce-app/wishlist",
           element: (
             <ProtectRoute>
               <Wishlist />
@@ -57,7 +58,7 @@ function App() {
           ),
         },
         {
-          path: "checkout",
+          path: "E-commerce-app/checkout",
           element: (
             <ProtectRoute>
               <CheckOut />
@@ -65,7 +66,7 @@ function App() {
           ),
         },
         {
-          path: "productdetails/:id/:category",
+          path: "E-commerce-app/productdetails/:id/:category",
           element: (
             <ProtectRoute>
               <ProductDetails />
@@ -73,7 +74,7 @@ function App() {
           ),
         },
         {
-          path: "category",
+          path: "E-commerce-app/category",
           element: (
             <ProtectRoute>
               <Category />
@@ -81,17 +82,17 @@ function App() {
           ),
         },
         {
-          path: "cart",
+          path: "E-commerce-app/cart",
           element: (
             <ProtectRoute>
               <Cart />
             </ProtectRoute>
           ),
         },
-        { path: "register", element: <Register /> },
-        { path: "login", element: <Login /> },
+        { path: "E-commerce-app/register", element: <Register /> },
+        { path: "E-commerce-app/login", element: <Login /> },
         {
-          path: "products",
+          path: "E-commerce-app/products",
           element: (
             <ProtectRoute>
               <Products />

@@ -29,37 +29,37 @@ const Navbar = () => {
                 <>
                   {" "}
                   <NavLink
-                    to="/"
+                    to="/E-commerce-app/"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Home
                   </NavLink>
                   <NavLink
-                    to="/products"
+                    to="/E-commerce-app/products"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Products
                   </NavLink>
                   <NavLink
-                    to="/category"
+                    to="/E-commerce-app/category"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Categories
                   </NavLink>
                   <NavLink
-                    to="/brands"
+                    to="/E-commerce-app/brands"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Brands
                   </NavLink>
                   <NavLink
-                    to="/cart"
+                    to="/E-commerce-app/cart"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Cart
                   </NavLink>
                   <NavLink
-                    to="/wishlist"
+                    to="/E-commerce-app/wishlist"
                     className="text-sm font-medium text-gray-900   px-3 py-2 rounded-md transition-colors duration-300 relative "
                   >
                     <i className="fa fa-regular fa-heart hover:text-red-500 "></i>
@@ -74,13 +74,13 @@ const Navbar = () => {
                 <>
                   {" "}
                   <NavLink
-                    to="/register"
+                    to="E-commerce-app/register"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Register
                   </NavLink>
                   <NavLink
-                    to="/login"
+                    to="E-commerce-app/login"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Login
@@ -91,7 +91,7 @@ const Navbar = () => {
                   {" "}
                   <NavLink
                     onClick={logout}
-                    to="/login"
+                    to="E-commerce-app/login"
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
                   >
                     Logout
@@ -159,34 +159,69 @@ const Navbar = () => {
               Home
             </NavLink>
             <NavLink
-              to="/products"
+              to="E-commerce-app//products"
               className="text-gray-900 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Products
             </NavLink>
             <NavLink
-              to="/category"
+              to="E-commerce-app//category"
               className="text-gray-900 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Categories
             </NavLink>
             <NavLink
-              to="/brands"
+              to="E-commerce-app//brands"
               className="text-gray-900 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Brands
             </NavLink>
             <NavLink
-              to="/cart"
+              to="E-commerce-app//cart"
               className="text-gray-900 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Cart
+            </NavLink>
+            <NavLink
+              onClick={logout}
+              to="E-commerce-app//login"
+              className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
+            >
+              Logout
             </NavLink>
           </>
         ) : (
           <>
             {" "}
-            <NavLink
+            {userLogin === null ? (
+              <>
+                {" "}
+                <NavLink
+                  to="E-commerce-app//register"
+                  className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
+                >
+                  Register
+                </NavLink>
+                <NavLink
+                  to="E-commerce-app//login"
+                  className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
+                >
+                  Login
+                </NavLink>
+              </>
+            ) : (
+              <>
+                {" "}
+                <NavLink
+                  onClick={logout}
+                  to="E-commerce-app//login"
+                  className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md transition-colors duration-300 relative before:absolute before:w-0 hover:before:w-full before:transition-all before:h-0.5 before:bottom-0 before:bg-black before:duration-1000"
+                >
+                  Logout
+                </NavLink>
+              </>
+            )}
+            {/* <NavLink
               to="/register"
               className="text-gray-900 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
             >
@@ -204,7 +239,7 @@ const Navbar = () => {
               className="text-gray-900 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Logout
-            </NavLink>
+            </NavLink> */}
           </>
         )}
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">

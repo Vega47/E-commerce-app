@@ -38,7 +38,7 @@ export default function Register() {
         if (data.message === "success") {
           setIsLoading(false);
           setUserLogin(data?.token);
-          navigate("/");
+          navigate("/E-commerce-app/");
           localStorage.setItem("userToken", data.token);
         }
       })
@@ -156,7 +156,7 @@ export default function Register() {
               </div>
             </form>
             <Link
-              to="/forgetpassword"
+              to="E-commerce-app/forgetpassword"
               className="text-center my-3 text-green-600 cursor-pointer hover:text-red-500"
             >
               Forget Your Password ?

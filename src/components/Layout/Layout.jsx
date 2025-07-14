@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Outlet } from "react-router-dom";
-
+import Footer from "../../components/Footer/Footer";
 export default function Layout() {
   const [co, setCo] = useState(0);
   useEffect(() => {}, []);
@@ -11,6 +11,7 @@ export default function Layout() {
       <div className="container w-11/12 m-auto my-7">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 }

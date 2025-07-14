@@ -25,7 +25,7 @@ let schema = Yup.object().shape({
 
 export default function Register() {
   console.log(useContext(UserContext));
-  let {setUserLogin}=useContext(UserContext)
+  let { setUserLogin } = useContext(UserContext);
 
   let navigate = useNavigate();
   const [isLoading, setIsloading] = useState(false);
@@ -55,9 +55,9 @@ export default function Register() {
       .then(({ data }) => {
         if (data.message === "success") {
           setIsloading(false);
-          setUserLogin(data?.token)
+          setUserLogin(data?.token);
           localStorage.setItem("userToken", data.token);
-          navigate("/");
+          navigate("/E-commerce-app/");
         }
         console.log(data);
       })
