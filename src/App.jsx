@@ -12,7 +12,7 @@ import Layout from "./components/Layout/Layout";
 import Notfound from "./components/Notfound/Notfound";
 import "./App.css";
 import ProtectRoute from "./components/ProtectRoute/ProtectRoute";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import UserContextProvider from "./components/Context/UserContext";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import CartContextProvider from "./components/Context/CartContext";
@@ -21,15 +21,15 @@ import CheckOut from "./components/CheckOut/CheckOut";
 import Wishlist from "./components/Wishlist/Wishlist";
 import WishlistContextProvider from "./components/Context/WishListContext";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
-
+import { createHashRouter, RouterProvider } from "react-router-dom";
 function App() {
-  let Route = createBrowserRouter([
+  let Route = createHashRouter([
     {
       path: "",
       element: <Layout />,
       children: [
         {
-          path: "E-commerce-app/",
+          index: true,
           element: (
             <ProtectRoute>
               <Home />
@@ -37,12 +37,12 @@ function App() {
           ),
         },
         {
-          path: "E-commerce-app/forgetpassword",
+          path: "/forgetpassword",
           element: <ForgetPassword />,
         },
 
         {
-          path: "E-commerce-app/brands",
+          path: "/brands",
           element: (
             <ProtectRoute>
               <Brands />
@@ -50,7 +50,7 @@ function App() {
           ),
         },
         {
-          path: "E-commerce-app/wishlist",
+          path: "/wishlist",
           element: (
             <ProtectRoute>
               <Wishlist />
@@ -58,7 +58,7 @@ function App() {
           ),
         },
         {
-          path: "E-commerce-app/checkout",
+          path: "/checkout",
           element: (
             <ProtectRoute>
               <CheckOut />
@@ -66,7 +66,7 @@ function App() {
           ),
         },
         {
-          path: "E-commerce-app/productdetails/:id/:category",
+          path: "productdetails/:id/:category",
           element: (
             <ProtectRoute>
               <ProductDetails />
@@ -74,7 +74,7 @@ function App() {
           ),
         },
         {
-          path: "E-commerce-app/category",
+          path: "/category",
           element: (
             <ProtectRoute>
               <Category />
@@ -82,17 +82,17 @@ function App() {
           ),
         },
         {
-          path: "E-commerce-app/cart",
+          path: "/cart",
           element: (
             <ProtectRoute>
               <Cart />
             </ProtectRoute>
           ),
         },
-        { path: "E-commerce-app/register", element: <Register /> },
-        { path: "E-commerce-app/login", element: <Login /> },
+        { path: "/register", element: <Register /> },
+        { path: "/login", element: <Login /> },
         {
-          path: "E-commerce-app/products",
+          path: "/products",
           element: (
             <ProtectRoute>
               <Products />

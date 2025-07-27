@@ -57,7 +57,7 @@ export default function Register() {
           setIsloading(false);
           setUserLogin(data?.token);
           localStorage.setItem("userToken", data.token);
-          navigate("/E-commerce-app/");
+          navigate("/");
         }
         console.log(data);
       })

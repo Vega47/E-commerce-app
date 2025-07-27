@@ -38,7 +38,7 @@ export default function Register() {
         if (data.message === "success") {
           setIsLoading(false);
           setUserLogin(data?.token);
-          navigate("/E-commerce-app/");
+          navigate("/");
           localStorage.setItem("userToken", data.token);
         }
       })

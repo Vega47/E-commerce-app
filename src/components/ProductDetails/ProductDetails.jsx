@@ -121,9 +121,7 @@ export default function ProductDetails() {
             {allProducts?.map((prod) => {
               return (
                 <div className="w-full md:w-1/6 m-2.5  lg:w-1/5 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
-                  <Link
-                    to={`/E-commerce-app/productdetails/${prod.id}/${prod.category.name}`}
-                  >
+                  <Link to={`/productdetails/${prod.id}/${prod.category.name}`}>
                     <a>
                       <img
                         className="p-8 rounded-t-lg w-full"
